@@ -1,0 +1,145 @@
+:root 
+{
+    --cyan: #00FFF8;
+    --soft-blue: #8BACD9;
+}
+.nft-card
+{
+    font-family: "Outfit", sans-serif;
+    background-color: #15263F;
+
+    --fluid-padding-min: 1.333333333333333 1.333333333333333 1.333333333333333;
+    --fluid-padding-max: 1.333333333333333 1.333333333333333 1.777777777777778;
+    padding: var(--fluid-padding-value);
+    width: 100%;
+    max-width: 19.444444444444444rem;
+}
+
+.nft-card > .img 
+{
+   --fluid-height: 15.444444444444444 16.777777777777778;
+    height: var(--fluid-height-value);
+    background-image: url(/public/images/image-equilibrium.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode:overlay;
+    cursor: pointer;
+    position: relative;
+    transition:background-color 300ms;
+    margin-bottom: 1.333333333333333rem;
+}
+
+.nft-card > .img:hover 
+{
+    background-color: hsl(178, 100%, 50%, 30%);
+}
+
+.nft-card > .img::before 
+{
+    content: '';
+    width: 2.666666666666667rem;
+    height: 2.666666666666667rem;
+    background-image: url(/public/images/icon-view.svg);
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    opacity: 0%;
+    transition: opacity 300ms;
+}
+
+.nft-card > .img:hover::before
+{
+    opacity: 100%;
+}
+
+.title 
+{
+    color: #FFFFFF;
+    font-size: 1.222222222222222rem;
+    font-weight: 600;
+    --fluid-margin-bottom: 0.666666666666667 0.888888888888889;
+    margin-bottom: var(--fluid-margin-bottom-value);
+    transition: color 300ms;
+    cursor: pointer;
+ 
+}
+
+.title:hover
+{
+    color:var(--cyan);
+}
+
+.desc 
+{
+    color: var(--soft-blue);
+    font-weight: 300;
+    line-height: 1.444444444444444;
+    --fluid-margin-bottom: 0.888888888888889 1.333333333333333;
+    margin-bottom: var(--fluid-margin-bottom-value);
+}
+
+.details 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    --fluid-padding-bottom: 0.888888888888889 1.333333333333333;
+    padding-bottom: var(--fluid-padding-bottom-value);
+    border-bottom: solid 1px #2E405A;
+}
+
+.detail 
+{
+
+    display: flex;
+    align-items: center;
+    gap: 0.333333333333333rem;
+    --fluid-font-size: 0.833333333333333 0.888888888888889;
+    font-size: var(--fluid-font-size-value);
+}
+.detail--eth
+{
+    font-weight: 600;
+    color: var(--cyan);
+}
+
+.detail--time 
+{
+    color: var(--soft-blue);
+}
+
+.creator 
+{
+    display: flex;
+    align-items: center;
+    gap: 0.888888888888889rem;
+    padding-top: 0.888888888888889rem;
+}
+
+.creator .img 
+{
+    width: 1.83rem;
+    height: 1.83rem;
+    border:solid 1px #FFFFFF;
+    border-radius: 50%;
+}
+
+.attrib 
+{
+    color: var(--soft-blue);
+    --fluid-font-size: 0.833333333333333 0.888888888888889;
+    font-size: var(--fluid-font-size-value);
+}
+
+.name 
+{
+    color: white;
+    transition: color 300ms;
+    cursor: pointer;
+}
+
+.name:hover
+{
+    color: var(--cyan);
+}
